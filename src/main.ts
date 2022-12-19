@@ -28,7 +28,7 @@ app.use(deserializeUser);
 // Routers
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
-app.use("/api/video", videoRouter);
+app.use("/api/videos", videoRouter);
 
 const server = app.listen(PORT, async () => {
   // Connect to Data Base

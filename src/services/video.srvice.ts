@@ -7,3 +7,9 @@ export const createVideo = ({ owner }: { owner: string }) => {
 export const findVideo = (videoId: Video["videoId"]) => {
   return VideoModel.findOne({ videoId });
 };
+
+export const findVideos = () => {
+  return VideoModel.find({
+    published: true,
+  }).lean();
+};
